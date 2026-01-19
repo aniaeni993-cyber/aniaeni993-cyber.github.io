@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menyiapkan Konten...</title>
+
+<style>
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#0b0b0b,#000);
+  font-family:system-ui;
+  color:#fff;
+}
+.box{
+  text-align:center;
+  padding:28px;
+  max-width:380px;
+}
+.loader{
+  width:70px;height:70px;
+  border:6px solid rgba(255,255,255,.2);
+  border-top:6px solid #ff2b2b;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+  margin:0 auto 18px;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+h2{margin:0 0 10px;font-size:20px}
+.count{font-size:30px;font-weight:800;color:#ff2b2b}
+.note{font-size:13px;opacity:.8;margin-top:8px}
+
+.links{display:none;margin-top:18px}
+.link-btn{
+  display:block;
+  margin:10px 0;
+  padding:14px;
+  border-radius:999px;
+  background:#fff;
+  color:#000;
+  font-weight:800;
+  text-decoration:none;
+  box-shadow:0 6px 18px rgba(0,0,0,.6);
+  transition:.2s;
+}
+.link-btn:hover{
+  background:#ff2b2b;
+  color:#fff;
+}
+.small{font-size:12px;opacity:.7;font-weight:600}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <div class="loader" id="loader"></div>
+
+  <h2 id="title">Menyiapkan video…</h2>
+  <div id="timerText">
+    Mohon tunggu <span class="count" id="t">5</span> detik
+  </div>
+  <div class="note">Jangan tutup halaman</div>
+
+  <div class="links" id="links">
+
+    <a href="https://www.effectivegatecpm.com/b29fkyqsa?key=da2a5b7f16814d1431018f8c5701a9a2" target="_blank" class="link-btn">
+      videy/hijab
+      <div class="small"></div>
+    </a>
+
+    <a href="https://www.effectivegatecpm.com/ygvchue0?key=10717a3baea198810cbf54f5fd8307f4" target="_blank" class="link-btn">
+      videy/kids
+    </a>
+
+    <a href="https://www.effectivegatecpm.com/w9w5x7cm?key=9476c3ddfedb504f3b2fecd833a459e1" target="_blank" class="link-btn">
+      videy/xxx
+    </a>
+
+    <a href="https://s.id/koleksi-dewasa" target="_blank" class="link-btn">
+      videy/3chi
+    </a>
+
+  </div>
+</div>
+
+<script>
+let time = 5;
+const t = document.getElementById("t");
+const loader = document.getElementById("loader");
+const links = document.getElementById("links");
+const title = document.getElementById("title");
+const timerText = document.getElementById("timerText");
+
+const timer = setInterval(()=>{
+  time--;
+  t.textContent = time;
+
+  if(time <= 0){
+    clearInterval(timer);
+    loader.style.display = "none";
+    timerText.style.display = "none";
+    title.innerText = "Klik VIDIO untuk melanjutkan";
+    links.style.display = "block";
+  }
+},1000);
+</script>
+
+</body>
+</html>
